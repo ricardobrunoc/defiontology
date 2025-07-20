@@ -1,0 +1,207 @@
+@prefix : <https://ricardo.bib.br/defi#> .
+@prefix ex: <https://ricardo.bib.br/defi> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+
+<http://example.org/defi#AgregadorDeRendimentos> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Protocolo> .
+
+<http://example.org/defi#Bloco> a owl:Class .
+
+<http://example.org/defi#NaoFungivel> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Token> .
+
+<http://example.org/defi#Usuario> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Agente> .
+
+<http://example.org/defi#assumePapel> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Software> ;
+    rdfs:range <http://example.org/defi#Agente> .
+
+<http://example.org/defi#compostoPor> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#DApps> ;
+    rdfs:range <http://example.org/defi#ContratoInteligente> .
+
+<http://example.org/defi#consome> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Transacoes> ;
+    rdfs:range <http://example.org/defi#Gas> .
+
+<http://example.org/defi#eTipoDe> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Agente> ;
+    rdfs:range <http://example.org/defi#ProvedorDeLiquidez> .
+
+<http://example.org/defi#gerencia> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#ContratoInteligente> ;
+    rdfs:range <http://example.org/defi#Token> .
+
+<http://example.org/defi#implementadoEm> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#ContratoInteligente> ;
+    rdfs:range <http://example.org/defi#Blockchain> .
+
+<http://example.org/defi#implementadoPor> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Protocolo> ;
+    rdfs:range <http://example.org/defi#ContratoInteligente> .
+
+<http://example.org/defi#interageCom> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Agente> ;
+    rdfs:range <http://example.org/defi#DApps> .
+
+<http://example.org/defi#possui> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Conta> ;
+    rdfs:range <http://example.org/defi#Carteira> .
+
+<http://example.org/defi#usa> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Protocolo> ;
+    rdfs:range <http://example.org/defi#Fungivel> .
+
+<http://example.org/defi#usadoEm> a owl:ObjectProperty ;
+    rdfs:domain <http://example.org/defi#Token> ;
+    rdfs:range <http://example.org/defi#DApps> .
+
+<http://www.co-ode.org/ontologies/ont.owl#Alice> a <http://example.org/defi#Pessoa>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#Bob> a <http://example.org/defi#Pessoa>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#João> a <http://example.org/defi#Pessoa>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#aave_contract> a <http://example.org/defi#ContratoInteligente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#alice_001> a <http://example.org/defi#Agente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#bob_001> a <http://example.org/defi#Agente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#contrato_seguro_001> a <http://example.org/defi#ContratoInteligente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#dapp_agroseguro> a <http://example.org/defi#DApps>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#empréstimo_aave_bob> a <http://example.org/defi#ProtocoloDeEmprestimo>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#eth_token> a <http://example.org/defi#Fungivel>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#ethereum> a <http://example.org/defi#Blockchain>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#evento_seguro_001> a <http://example.org/defi#Transacoes>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#joao_001> a <http://example.org/defi#Agente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#oraculo_clima> a <http://example.org/defi#Oraculo>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#protocolo_agroseguro> a <http://example.org/defi#ProtocoloDEX>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#segurado_001> a owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#segurodai_token> a <http://example.org/defi#Fungivel>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#swap_alice> a <http://example.org/defi#ProtocoloDEX>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#tomador_001> a owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#tx_compra_seguro> a owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#uniswap_contract> a <http://example.org/defi#ContratoInteligente>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#usdc_token> a <http://example.org/defi#Fungivel>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#usuária_dex_001> a owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#wallet_alice> a <http://example.org/defi#Carteira>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#wallet_bob> a <http://example.org/defi#Carteira>,
+        owl:NamedIndividual .
+
+<http://www.co-ode.org/ontologies/ont.owl#wallet_joao> a <http://example.org/defi#Carteira>,
+        owl:NamedIndividual .
+
+:esprestimo_aave_bob a :ProtocoloDeEmprestimo ;
+    :implementadoPor :aave_contract .
+
+<http://example.org/defi#Conta> a owl:Class .
+
+<http://example.org/defi#Gas> a owl:Class .
+
+<http://example.org/defi#Oraculo> a owl:Class .
+
+<http://example.org/defi#ProtocoloDeEmprestimo> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Protocolo> .
+
+<http://example.org/defi#ProvedorDeLiquidez> a owl:Class .
+
+<http://example.org/defi#Software> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Agente> .
+
+ex: a owl:Ontology ;
+    owl:versionIRI ex: .
+
+:aave_contract a :ContratoInteligente ;
+    :gerencia :eth_token .
+
+:eth_token a :Token ;
+    rdfs:label "Token ETH" .
+
+:swap_alice a :ProtocoloDEX ;
+  :implementadoPor :uniswap_contract .
+
+:uniswap_contract a :ContratoInteligente ;
+  :compostoPor :dapp_uniswap .
+
+:dapp_uniswap a :DApp ;
+    rdfs:label "Uniswap DApp" .
+
+:alice_001 a :Agente ;
+   :interageCom :dapp_uniswap .
+
+:oraculo_clima rdf:type :Oraculo ;
+    rdfs:label "Oráculo de Clima" ;
+    :fonteDados "API ClimaTempo" .
+
+:Usuario :assumePapel :Agente .
+:Software :assumePapel :Agente .
+
+<http://example.org/defi#Blockchain> a owl:Class .
+
+<http://example.org/defi#ProtocoloDEX> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Protocolo> .
+
+<http://example.org/defi#Transacoes> a owl:Class .
+
+<http://example.org/defi#Pessoa> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Agente> .
+
+<http://example.org/defi#Carteira> a owl:Class .
+
+<http://example.org/defi#DApps> a owl:Class .
+
+<http://example.org/defi#Fungivel> a owl:Class ;
+    rdfs:subClassOf <http://example.org/defi#Token> .
+
+<http://example.org/defi#Token> a owl:Class .
+
+<http://example.org/defi#Protocolo> a owl:Class .
+
+<http://example.org/defi#ContratoInteligente> a owl:Class .
+
+<http://example.org/defi#Agente> a owl:Class .
+
